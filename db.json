@@ -1,0 +1,11 @@
+{
+  "tasks": [
+    { "id": "1", "title": "Set up project", "description": "Init Vite + React Query", "status": "done", "order": 1 },
+    { "id": "2", "title": "Design board layout", "description": "Three columns: todo, in progress, done", "status": "done", "order": 2 },
+    { "id": "3", "title": "Implement useQuery for tasks", "description": "Fetch and render the board", "status": "in_progress", "order": 1 },
+    { "id": "4", "title": "Add create task mutation", "description": "Form + POST + invalidation", "status": "in_progress", "order": 2 },
+    { "id": "5", "title": "Optimistic status change", "description": "Move card between columns instantly", "status": "todo", "order": 1 },
+    { "id": "6", "title": "Delete task", "description": "Remove card with confirmation", "status": "todo", "order": 2 },
+    { "id": "7", "title": "Write README", "description": "Screenshots, stack, patterns", "status": "todo", "order": 3 }
+  ]
+}
