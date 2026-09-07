@@ -1,13 +1,14 @@
-export type Status = 'todo' | 'in_progress' | 'done';
+export type TaskStatus = 'todo' | 'in-progress' | 'done';
 
 export interface Task {
   id: string;
   title: string;
-  description: string;
-  status: Status;
-  order: number;
+  description?: string;
+  status: TaskStatus;
+  createdAt: string;
 }
 
-// DTO — дані для створення (без id, його дає сервер)
-export type CreateTaskDto = Omit<Task, 'id'>;
-export type UpdateTaskDto = Partial<Omit<Task, 'id'>>;
+/** Створення: id і createdAt проставляються поза формою (сервер / api-шар). */
+export type CreateTaskInput = Omit<Task, 'id' | 'createdAt'>;
+export type UpdateTaskInput = { id: string; patch: Partial<CreateTaskInput> };
+export type TasksByStatus = Record<TaskStatus, Task[]>;

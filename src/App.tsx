@@ -1,26 +1,16 @@
-import './App.css'
-
-import { useQuery } from '@tanstack/react-query';
+import { Board } from './features/tasks/components/Board';
+import { DevFailureToggle } from './features/tasks/components/DevFailureToggle';
 
 function App() {
-  const { data, isPending, isError } = useQuery({
-    queryKey: ['todos'],
-    queryFn: () =>
-      fetch('https://jsonplaceholder.typicode.com/todos?_limit=5').then((r) =>
-        r.json()
-      ),
-  });
-
-  if (isPending) return <p>Loading...</p>;
-  if (isError) return <p>Error</p>;
-
   return (
-    <ul>
-      {data.map((t: { id: number; title: string }) => (
-        <li key={t.id}>{t.title}</li>
-      ))}
-    </ul>
+    <div className="mx-auto max-w-[1126px] px-5 pt-6 pb-16">
+      <header className="mb-6 flex items-center justify-between gap-4">
+        <h1 className="text-3xl tracking-tight">Kanban</h1>
+        <DevFailureToggle />
+      </header>
+      <Board />
+    </div>
   );
 }
 
-export default App
+export default App;

@@ -1,11 +1,54 @@
 {
   "tasks": [
-    { "id": "1", "title": "Set up project", "description": "Init Vite + React Query", "status": "done", "order": 1 },
-    { "id": "2", "title": "Design board layout", "description": "Three columns: todo, in progress, done", "status": "done", "order": 2 },
-    { "id": "3", "title": "Implement useQuery for tasks", "description": "Fetch and render the board", "status": "in_progress", "order": 1 },
-    { "id": "4", "title": "Add create task mutation", "description": "Form + POST + invalidation", "status": "in_progress", "order": 2 },
-    { "id": "5", "title": "Optimistic status change", "description": "Move card between columns instantly", "status": "todo", "order": 1 },
-    { "id": "6", "title": "Delete task", "description": "Remove card with confirmation", "status": "todo", "order": 2 },
-    { "id": "7", "title": "Write README", "description": "Screenshots, stack, patterns", "status": "todo", "order": 3 }
-  ]
+    {
+      "id": "1",
+      "title": "Set up the project",
+      "description": "Vite + React + TS + React Query",
+      "status": "done",
+      "createdAt": "2026-09-01T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Design board layout",
+      "description": "Three columns: To Do, In Progress, Done",
+      "status": "done",
+      "createdAt": "2026-09-01T11:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Implement useQuery for tasks",
+      "description": "One request for the whole board, grouped via select",
+      "status": "in-progress",
+      "createdAt": "2026-09-02T09:15:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Add create task mutation",
+      "description": "Form + POST + invalidation",
+      "status": "in-progress",
+      "createdAt": "2026-09-02T14:40:00.000Z"
+    },
+    {
+      "id": "5",
+      "title": "Optimistic status change",
+      "description": "Move a card between columns instantly, roll back on failure",
+      "status": "todo",
+      "createdAt": "2026-09-03T08:05:00.000Z"
+    },
+    {
+      "id": "6",
+      "title": "Delete task",
+      "description": "Remove a card optimistically",
+      "status": "todo",
+      "createdAt": "2026-09-03T08:20:00.000Z"
+    },
+    {
+      "id": "7",
+      "title": "Write README",
+      "description": "Stack, patterns, acceptance criteria",
+      "status": "todo",
+      "createdAt": "2026-09-03T16:00:00.000Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
